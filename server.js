@@ -30,7 +30,7 @@ app.post('/send-code', async (req, res) => {
     from: 'EmployeeVerification@gmail.com',
     to: email,
     subject: 'Your Verification Code',
-    text: `inwi verification code is: ${code}`,
+    text: `Your verification code is: ${code}`,
   };
 
   try {
@@ -41,5 +41,6 @@ app.post('/send-code', async (req, res) => {
     res.status(500).json({ success: false, error });
   }
 });
+
 
 app.listen(5000, () => console.log('Server running on port 5000'));
